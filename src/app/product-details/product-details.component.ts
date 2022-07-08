@@ -4,8 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import {Product, products } from '../products';
 import { CartService } from '../cart.service';
 
-import { ngOnInit } from '@angular/core/index.d.ts'
-
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -16,10 +14,10 @@ export class ProductDetailsComponent implements OnInit {
 
   product: Product | undefined;
 
-  constructor(private route: ActivatedRoute) {
-    private route: Activated,
+  constructor (
+    private route: ActivatedRoute,
     private cartService: CartService
-  }
+  ) { }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
